@@ -1,3 +1,5 @@
+//Adrián Visiedo Rodríguez
+
 package org.iesalandalus.programacion.robot.modelo;
 
 import javax.naming.OperationNotSupportedException;
@@ -43,7 +45,7 @@ public class Robot {
         return zona;
     }
 
-    public void setZona(Zona zona) {
+    private void setZona(Zona zona) {
         Objects.requireNonNull(zona, "La zona no puede ser nula.");
         this.zona = zona;
     }
@@ -52,7 +54,7 @@ public class Robot {
         return orientacion;
     }
 
-    public void setOrientacion(Orientacion orientacion) {
+    private void setOrientacion(Orientacion orientacion) {
         Objects.requireNonNull(orientacion, "La orientación no puede ser nula.");
         this.orientacion = orientacion;
     }
@@ -61,7 +63,7 @@ public class Robot {
         return coordenada;
     }
 
-    public void setCoordenada(Coordenada coordenada) {
+    private void setCoordenada(Coordenada coordenada) {
         Objects.requireNonNull(coordenada, "La coordenada no puede ser nula.");
         if (!zona.pertenece(coordenada)){
             throw new IllegalArgumentException("La coordenada no pertenece a la zona.");
