@@ -130,7 +130,7 @@ public class Robot {
     public String toString() {
         return "Robot{" +
                 "zona=" + zona +
-                ", orientacion=" + orientacion +
+                ", orientación=" + orientacion +
                 ", coordenada=" + coordenada +
                 '}';
     }
