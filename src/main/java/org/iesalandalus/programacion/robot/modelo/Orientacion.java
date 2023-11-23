@@ -3,14 +3,14 @@
 package org.iesalandalus.programacion.robot.modelo;
 
 public enum Orientacion {
-    NORTE ("Norte"),
-    SUR ("Sur"),
-    ESTE ("Este"),
-    OESTE ("Oeste"),
-    NORESTE ("Noreste"),
+    NORTE("Norte"),
+    SUR("Sur"),
+    ESTE("Este"),
+    OESTE("Oeste"),
+    NORESTE("Noreste"),
     NOROESTE("Noroeste"),
-    SURESTE ("Sureste"),
-    SUROESTE ("Suroeste");
+    SURESTE("Sureste"),
+    SUROESTE("Suroeste");
 
     private final String cadenaMostrar;
 

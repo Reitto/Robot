@@ -11,15 +11,14 @@ public class ControladorRobot {
     public ControladorRobot(Robot robot) {
         Objects.requireNonNull(robot, "El robot no puede ser nulo.");
         try {
-            this.robot = new Robot(robot.zona,robot.orientacion,robot.coordenada);
-        }catch (NullPointerException e){
+            this.robot = new Robot(robot.zona, robot.orientacion, robot.coordenada);
+        } catch (NullPointerException e) {
             try {
                 this.robot = new Robot(robot.zona, robot.orientacion);
-            }catch (NullPointerException i){
+            } catch (NullPointerException i) {
                 this.robot = new Robot();
             }
         }
-
     }
 
     public Robot getRobot() {

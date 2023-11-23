@@ -40,7 +40,7 @@ public class Consola {
             System.out.print("Introduce el alto de la zona: ");
             alto = Entrada.entero();
         } while (ancho <= 0 || alto <= 0);
-        return new Zona(ancho,alto);
+        return new Zona(ancho, alto);
     }
 
     public static void mostrarMenuOrientacion() {
