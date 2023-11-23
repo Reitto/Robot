@@ -65,24 +65,25 @@ public class Robot {
 
     private void setCoordenada(Coordenada coordenada) {
         Objects.requireNonNull(coordenada, "La coordenada no puede ser nula.");
-        if (!zona.pertenece(coordenada)){
+        if (!zona.pertenece(coordenada)) {
             throw new IllegalArgumentException("La coordenada no pertenece a la zona.");
         }
         this.coordenada = coordenada;
     }
 
     public void avanzar() throws OperationNotSupportedException {
-        switch (orientacion) {
-            case NORTE -> coordenada = new Coordenada(coordenada.x(), coordenada.y() + 1);
-            case SUR -> coordenada = new Coordenada(coordenada.x(), coordenada.y() - 1);
-            case ESTE -> coordenada = new Coordenada(coordenada.x() + 1, coordenada.y());
-            case OESTE -> coordenada = new Coordenada(coordenada.x() - 1, coordenada.y());
-            case NORESTE -> coordenada = new Coordenada(coordenada.x() + 1, coordenada.y() + 1);
-            case NOROESTE -> coordenada = new Coordenada(coordenada.x() - 1, coordenada.y() + 1);
-            case SURESTE -> coordenada = new Coordenada(coordenada.x() + 1, coordenada.y() - 1);
-            case SUROESTE -> coordenada = new Coordenada(coordenada.x() - 1, coordenada.y() - 1);
-        }
-        if (!zona.pertenece(coordenada)) {
+        try {
+            switch (orientacion) {
+                case NORTE -> setCoordenada(new Coordenada(coordenada.x(), coordenada.y() + 1));
+                case SUR -> setCoordenada(new Coordenada(coordenada.x(), coordenada.y() - 1));
+                case ESTE -> setCoordenada(new Coordenada(coordenada.x() + 1, coordenada.y()));
+                case OESTE -> setCoordenada(new Coordenada(coordenada.x() - 1, coordenada.y()));
+                case NORESTE -> setCoordenada(new Coordenada(coordenada.x() + 1, coordenada.y() + 1));
+                case NOROESTE -> setCoordenada(new Coordenada(coordenada.x() - 1, coordenada.y() + 1));
+                case SURESTE -> setCoordenada(new Coordenada(coordenada.x() + 1, coordenada.y() - 1));
+                case SUROESTE -> setCoordenada(new Coordenada(coordenada.x() - 1, coordenada.y() - 1));
+            }
+        } catch (IllegalArgumentException e) {
             throw new OperationNotSupportedException("No se puede avanzar, ya que se sale de la zona.");
         }
     }
