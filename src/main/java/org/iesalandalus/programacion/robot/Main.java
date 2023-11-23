@@ -3,7 +3,7 @@
 package org.iesalandalus.programacion.robot;
 
 import org.iesalandalus.programacion.robot.modelo.*;
-import org.iesalandalus.programacion.robot.modelo.vista.Consola;
+import org.iesalandalus.programacion.robot.vista.Consola;
 
 import javax.naming.OperationNotSupportedException;
 

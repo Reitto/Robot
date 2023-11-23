@@ -1,6 +1,6 @@
 //Adrián Visiedo Rodríguez
 
-package org.iesalandalus.programacion.robot.modelo.vista;
+package org.iesalandalus.programacion.robot.vista;
 
 import org.iesalandalus.programacion.robot.modelo.*;
 import org.iesalandalus.programacion.utilidades.Entrada;
